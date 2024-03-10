@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+//imprime o cabeçalho do nosso jogo
+int main( void ){
+    printf("*****************************************\n");
+    printf("* Bem vindo ao nosso jogo de advinhacao *\n");
+    printf("*****************************************\n");
+
+    int numerosecreto = 42, chute;
+
+
+    printf("Qual e seu chute? ");
+    scanf("%d", &chute);
+    printf("Seu chute foi %d\n", chute);
+
+    int acertou = (chute == numerosecreto);
+
+    if(acertou){
+          printf("Parabens voce acertou!\n");
+          printf("Voce eh um exelente jogador!");
+    }
+    else{
+        int maior = (chute > numerosecreto);
+        if(maior){
+            printf("Seu chute foi maior que o numero secreto!\n");
+        }
+        else{
+            printf("Seu numero foi menor que o numero secreto!\n");
+        }
+    }
